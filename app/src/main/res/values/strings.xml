@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MyLoginApp</string>
+    <string name="rfis_g">RFIS-G</string>
+    <string name="new_add_record">New/Add Record</string>
+    <string name="records">RECORDS</string>
+    <string name="welcome_employee">WELCOME EMPLOYEE!</string>
+    <string name="Records">Records</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="ricefarm_inventory_system_with_geotagging">Ricefarm Inventory System with Geotagging</string>
+    <string name="login">LOGIN</string>
+    <string name="welcome_admin">WELCOME ADMIN!</string>
+    <string name="new_record">New Record</string>
+    <string name="all_records">All Records</string>
+    <string name="welcome_head">WELCOME HEAD!</string>
+    <string name="rsbsa_no">RSBSA No.</string>
+</resources>

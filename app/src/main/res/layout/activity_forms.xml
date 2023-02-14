@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#A68282"
+    tools:context=".Forms">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="New Record"
+                android:gravity="center"
+                android:textStyle="italic"
+                android:textSize="25sp"
+                android:textColor="@color/yellow"
+                android:background="@color/black">
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_RSBSA_No"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:hint="RSBSA No."
+                app:endIconMode="clear_text">
+
+                <EditText
+                    android:id="@+id/textInputEditText_RSBSA_No"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_Barangay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="20dp"
+                android:hint="Barangay">
+
+                <EditText
+                    android:id="@+id/textInputEditText_Barangay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_FullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="20dp"
+                android:hint="Full name">
+
+                <EditText
+                    android:id="@+id/textInputEdit_FullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <EditText
+                android:id="@+id/editTextNumber_RSBSA_Area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:hint="RSBSA Area (has.)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/editTextNumber_No_of_KGS_SeedsReceived"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:hint="No. of KGS Seeds Received"
+                android:inputType="number" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/textView_TypeOfSeedsReceived"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="Type of Seeds Received (Hybrid/Inbred)"
+                android:textColor="@color/yellow"
+                android:textStyle="italic" />
+
+
+            <EditText
+                android:id="@+id/editText_TypeOfSeedsReceived_Inbred"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:hint="Inbred"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/editText_TypeOfSeedsReceived_Hybrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:hint="Hybrid"
+                android:inputType="text" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/textView_Geotagged_Coordinates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="Geotagged_Coordinates"
+                android:textColor="@color/yellow"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/editText_GeotaggedCoordinates_Latitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:hint="Latitude"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/editText_GeotaggedCoordinates_Longitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:hint="Longitude"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/editTextDate_DateGeotaggedTaken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:hint="Date Geotagged Taken"
+                android:inputType="date" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:background="?android:attr/listDivider" />
+
+            <EditText
+                android:id="@+id/editText_NameOfOriginalRecipientDuringRelease"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:hint="Name of Original Recipient During Release"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editTextMultiLine_Remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="start|top"
+                android:hint="Remarks"
+                android:inputType="textMultiLine" />
+
+            <Button
+                android:id="@+id/button_Save"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:text="Save"
+                android:textStyle="bold"
+                app:cornerRadius="10dp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
