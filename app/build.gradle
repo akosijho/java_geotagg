@@ -1,12 +1,13 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
 
 android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.myloginapp"
+        applicationId "com.da.geotagg"
         minSdk 21
         targetSdk 31
         versionCode 1
@@ -28,6 +29,12 @@ android {
 }
 
 dependencies {
+    implementation platform('com.google.firebase:firebase-bom:31.2.1')
+    // Declare the dependency for the Cloud Firestore library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-firestore'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
 
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.6.0'
