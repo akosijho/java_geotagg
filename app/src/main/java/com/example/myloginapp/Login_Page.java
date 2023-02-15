@@ -2,8 +2,11 @@ package com.example.myloginapp;
 
 import static android.content.ContentValues.TAG;
 
+import static java.security.AccessController.getContext;
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,15 +20,16 @@ import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
+
 
 public class Login_Page extends AppCompatActivity {
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     FirebaseAuth auth;
+    ProgressDialog pb;
 
     @Override
     public void onStart() {
@@ -41,12 +45,14 @@ public class Login_Page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
+        pb= new ProgressDialog(this);
 
         auth = FirebaseAuth.getInstance();
         TextView username =(TextView) findViewById(R.id.et_username);
         TextView password =(TextView) findViewById(R.id.et_password);
 
         MaterialButton loginbtn = (MaterialButton)  findViewById(R.id.btn_login);
+
 
         //admin and admin
 
@@ -83,6 +89,8 @@ public class Login_Page extends AppCompatActivity {
     }
 
     private void login(String username, String password){
+        pb.setMessage("Loading");
+        pb.show();
         username = username+"@geo.com";
         auth.signInWithEmailAndPassword(username, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -94,10 +102,11 @@ public class Login_Page extends AppCompatActivity {
                             FirebaseUser user = auth.getCurrentUser();
 //                            updateUI(user);
 
-
+                    pb.dismiss();
                     Intent intent = new Intent(getApplicationContext(), Employee_HomePage.class);
                     startActivity(intent);
                         } else {
+                            pb.dismiss();
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
                             Toast.makeText(Login_Page.this, "Authentication failed.",
@@ -105,8 +114,7 @@ public class Login_Page extends AppCompatActivity {
 //                            updateUI(null);
                         }
                     }
+
                 });
     }
 }
-
-
